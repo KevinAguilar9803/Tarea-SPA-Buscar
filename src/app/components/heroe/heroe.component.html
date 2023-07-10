@@ -1,0 +1,24 @@
+<h1>{{heroe.nombre}}
+    <small> - </small> <small>{{heroe.aparicion}}</small></h1>
+<hr>
+<div clas="row">
+    <div class="col-md-4">
+        <img [src]="heroe.img" alt="" class="img-fluid">
+        <br>
+        <br>
+        <a [routerLink]="['/heroes']" class="btn btn-outline-danger btn-block"> Regresar</a>
+    </div>
+    <div class="col-md-8">
+        <h3>{{heroe.nombre}} </h3>
+        <hr>
+        <p>
+            {{heroe.bio}}
+        </p>
+        <div *ngIf="heroe.casa=='DC'">
+            <img src="https://styles.redditmedia.com/t5_2ykm6/styles/communityIcon_3k7ir46oe7a81.png" alt="">
+        </div>
+        <div *ngIf="heroe.casa=='Marvel'">
+            <img src="https://styles.redditmedia.com/t5_2r9ad/styles/communityIcon_7u0srvxd76n71.jpeg?width=256&s=8d45d575d3ac26ab9aae56010a1764c4a8fc5079" alt="">
+        </div>
+    </div>
+</div>
