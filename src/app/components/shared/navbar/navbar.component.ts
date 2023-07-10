@@ -3,7 +3,6 @@ import { HeroesService, Heroe } from 'src/app/services/heroes.service';
 import {Router}from '@angular/router';
 
 
-
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -13,11 +12,11 @@ import {Router}from '@angular/router';
 
 export class NavbarComponent {
 
-  heroe:number=0;
-  searchs(nom:string){
+  pos:number=0;
+  buscar(nom:string){
     console.log(nom);
-    this.heroe = this._heroesServices.busquedaHeroe(nom);
-    if(this.heroe>=0)this.verHeroe(this.heroe);
+    this.pos = this._heroesServices.busquedaHeroe(nom);
+    if(this.pos>=0)this.verHeroe(this.pos);
     else console.log("mensaje de error");
   }
   constructor(private _heroesServices:HeroesService, private router: Router){
